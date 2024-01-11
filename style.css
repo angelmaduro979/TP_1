@@ -1,0 +1,1717 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* FUENTE PARA H1, H2 Y H3 */
+
+@font-face {
+    font-family: 'Acumin pro';
+    src: url('font/Acumin-RPro.otf') format('opentype');
+}
+
+/* FUENTE PARA P Y SPANS */
+
+@font-face {
+    font-family: 'poppins';
+    src: url('font2/Poppins-Regular.ttf') format('truetype');
+}
+
+body {
+    background-color: #ECF0F3;
+    font-family: 'Acumin pro';
+
+}
+
+p,
+span {
+    font-family: 'poppins';
+}
+
+/* barra de navegacion */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0px;
+    align-items: center;
+    background-color: #ECF0F3; 
+}
+
+/* logo y div */
+
+.logo {
+    font-size: 12px;
+    color: #5c5e63;
+    margin-left: 15%;
+}
+
+/* icono de menu hamburguesa */
+
+header .spanPrincipal i {
+    display: none;
+}
+
+/* Barra de navegacion */
+
+header ul {
+    display: flex;
+    list-style: none;
+    padding-right: 40px;
+
+}
+
+header a {
+    text-decoration: none;
+    font-size: 10px;
+    color: #5c5e63;
+    font-weight: 750;
+    padding: 12px 25px;
+}
+
+.buy-now {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #E2E7ED, #FBFCFD);
+    color: #FE145C;
+    box-shadow: 8px 8px 20px 0px #cecece;
+}
+
+header a:hover {
+    background: linear-gradient(to right, #9f9f9f, #e1e2e3);
+    color: #ff0019;
+    border-radius: 5px;
+}
+
+.buy-now:hover {
+    background: linear-gradient(to right, #fb0019, #f28792);
+    color: white;
+    border-radius: 5px;
+}
+
+/* -----------------------MAIN -----------------------*/
+
+main {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 70px;
+
+}
+
+/* div padre */
+
+.welcomePadre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1170px;
+}
+
+/* div de info izquierda */
+
+.welcome {
+    width: 585px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+/* texto menos los botones de las redes sociales */
+
+.welcomeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+.welcomeSpan {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    color: #5c5e63;
+}
+
+.titleH1 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.welcome h1 {
+    color: black;
+    font-size: 50px;
+    letter-spacing: 1px;
+
+}
+
+.red-name {
+    color: #FF014F;
+}
+
+.welcome h2 {
+    color: black;
+    font-size: 38px;
+    letter-spacing: 1px;
+    border-right: 2px solid #FF014F;
+    width: fit-content;
+    height: fit-content;
+    padding-right: 2px;
+    padding-bottom: 0;
+}
+
+.red-a {
+    color: #FF014F;
+    font-family: 'Acumin pro';
+}
+
+.welcome p {
+    color: #5c5e63;
+    font-size: 13px;
+
+
+}
+
+.image {
+    width: 383px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+main img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 8px 8px 20px 0px #b6b6b6;
+}
+
+/* Redes sociales div y botones */
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    margin-top: 30px;
+    padding-right: 20px;
+}
+
+.social-media ul {
+    list-style: none;
+}
+
+.sm-left,
+.sm-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sm-left ul,
+.sm-right ul {
+    display: flex;
+    gap: 20px;
+}
+
+
+.sm-right span,
+.sm-left span {
+    color: #555555;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+.social-media .sm-right i,
+.social-media .sm-left i {
+    padding: 18px;
+    font-size: 14px;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 8px 8px 20px 0px #cecece;
+    background: linear-gradient(to right, #E2E7ED, #FBFCFD);
+}
+
+.fa-figma {
+    color: #FF014F;
+}
+
+.social-media .sm-left i:hover {
+    padding: 18px;
+    font-size: 14px;
+    color: #fb0019;
+    border-radius: 5px;
+    box-shadow: 8px 8px 20px 0px #868686;
+}
+
+.social-media .sm-right i:hover {
+    box-shadow: 8px 8px 20px 0px #868686;
+    ;
+}
+
+/* -----------------------FEATURES -----------------------*/
+/* Section */
+.features {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Div padre de todas las secciones */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 60px;
+    border-top: 2px solid #E5E9EC;
+    width: 1170px;
+    align-items: center;
+
+}
+
+/* titulo seccion */
+
+.featuresTitle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 40px;
+}
+
+.featuresSpan {
+    color: #FF014F;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+.container h2 {
+    color: #3C3E41;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+/* Div de todas las tarjetas */
+
+.containerTarjetas {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    padding-bottom: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Div para hileras de tarjetas */
+
+.superior {
+    display: flex;
+    gap: 40px;
+}
+
+.inferiores {
+    display: flex;
+    gap: 40px;
+}
+
+/* tarjetas */
+
+.containerTarjetas .tarjeta {
+
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #E2E7ED, #FBFCFD);
+    box-shadow: 8px 8px 20px 0px #cecece;
+}
+
+/* Tarjetas contenido */
+
+
+.tarjetaContenido {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    padding: 0;
+
+}
+
+.tarjetaContenido3 {
+    padding-bottom: 30px;
+}
+
+.containerTarjetas .tarjeta h3 {
+    font-size: 24px;
+    font-family: 'poppins';
+    color: #3C3E41
+}
+
+.containerTarjetas .tarjeta i {
+    margin-left: 10px;
+    font-size: 25px;
+    color: #FF014F;
+}
+
+.containerTarjetas .tarjeta .wifi i {
+    font-size: 22px;
+}
+
+.containerTarjetas .tarjeta p {
+    line-break: loose;
+    color: #5c5e63;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* -----------------------PORTAFOLIO -----------------------*/
+/* Section */
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+/* div padre */
+
+.portfolio .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Titulo y subtitulo mas Div */
+
+.containerTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+
+.containerTitle span {
+    color: #FF014F;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+/* Todas las tarjetas mas su Div contenedor */
+
+.tarjetasContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+}
+
+.portfolio .container .tarjeta {
+    padding: 20px 30px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    gap: 20px;
+    height: 320px;
+    width: 280px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #E2E7ED, #FBFCFD);
+    box-shadow: 8px 8px 20px 0px #cecece;
+}
+
+/* Tarjetas contenido */
+
+.portfolio .container .tarjeta img {
+    width: 280px;
+
+}
+
+.portfolio .container .tarjeta span {
+    font-size: 10px;
+    color: #FF014F;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+.portfolio .container .tarjeta .spanScore {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.portfolio .container .tarjeta .spanScore .scorePortfolio {
+    color: #5c5e63;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+.portfolio .container .tarjeta h3 {
+    font-size: 20px;
+}
+
+
+/* --------------------Resume ----------------------*/
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.resumeBar ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 8px 8px 20px 0px #cecece;
+    height: 80px;
+    width: 1170px;
+    background: linear-gradient(to right, #E2E7ED, #FBFCFD);
+    border-radius: 12px;
+    padding: 0;
+
+}
+
+
+.resumeBar ul a {
+    text-decoration: none;
+    color: #3C3E41;
+    padding: 25px 90px;
+    background: transparent;
+    font-size: 18px;
+    font-family: 'poppins';
+    border-radius: 12px;
+    height: 80px;
+    font-weight: bold;
+}
+
+.resumeBar ul .educationButton {
+    color: #FF014F;
+    box-shadow: 8px 8px 20px 0px #cecece;
+
+}
+
+.resumeBar ul a:hover {
+    cursor: pointer;
+    color: #FF014F;
+    background: linear-gradient(to right, #E2E7ED, #FBFCFD);
+    box-shadow: 8px 8px 20px 0px #cecece;
+}
+
+
+.year {
+    font-size: 12px;
+    color: #FF014F;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+
+.EdQualityH3Span,
+.jobExperienceH3Span {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.educationJobExp {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 18px;
+}
+
+.educationJobExp .educationLeft .EdQualityH3Span h3,
+.educationJobExp .jobExperienceRight .jobExperienceH3Span {
+    font-size: 30px
+}
+
+
+/* grid de lineas */
+
+.circleAndLine {
+
+    height: 100%;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.line1 {
+    border-left: 5px solid #cecece;
+    height: 30px;
+}
+
+.circleAndHorizontal {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+}
+
+.circle {
+    border: 5px solid #cecece;
+    border-radius: 100%;
+    height: 7px;
+    width: 7px;
+}
+
+.horizontal {
+    border-top: 5px solid #cecece;
+    width: 17px;
+}
+
+.line2 {
+    border-left: 5px solid #cecece;
+    height: 275px;
+}
+
+.line3 {
+    border-left: 5px solid #cecece;
+    height: 210px;
+}
+
+/* tarjetas */
+
+
+
+/* TARJETAS IZQUIERDAS */
+.educationQuality {
+    display: flex;
+}
+
+.educationJobExp .card {
+    background: linear-gradient(to right, #E2E7ED, #FBFCFD);
+    border-radius: 6px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+    width: 480px;
+    height: 200px;
+    box-shadow: 8px 8px 20px 0px #cecece;
+}
+
+/* contenido cards */
+
+.educationJobExp .card h3 {
+    font-size: 20px;
+    font-family: 'poppins';
+    color: #2b2d2f;
+
+}
+
+.h3Span {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.subtitleScore {
+    display: flex;
+
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.subtitle {
+    font-size: 10px;
+    color: #5c5e63;
+    font-weight: 600;
+}
+
+.score {
+    padding: 8px 10px;
+    background: linear-gradient(to right, #E2E7ED, #FBFCFD);
+    box-shadow: 8px 8px 20px 0px #cecece;
+    color: #FF014F;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.educationJobExp .card p {
+    font-size: 12px;
+    color: #5c5e63;
+    font-weight: 900;
+    border-top: 2px solid #E5E9EC;
+    padding-top: 20px;
+}
+
+
+/* tarjertas derechas */
+
+.jobExperienceRight {
+    display: flex;
+    flex-direction: column;
+}
+
+.jobExperience {
+    display: flex;
+
+}
+
+/* ----------------blog------------ */
+/* Section */
+.blog {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* tarjetas */
+/* Div tarjetas */
+
+.myBlog {
+    display: flex;
+    justify-content: space-between;
+    width: 1170px;
+}
+
+/* tarjetas */
+
+.myBlog .tarjeta {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #E2E7ED, #FBFCFD);
+    ;
+    padding: 0px 30px 40px 30px;
+    gap: 15px;
+    height: 320px;
+    width: 280px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 8px 8px 20px 0px #cecece;
+}
+
+/* contenido tarjetas */
+
+.myBlog .tarjeta img {
+    width: 280px;
+    height: 210px;
+    border-radius: 10px;
+    display: flex;
+    position: absolute;
+    bottom: 170px;
+
+}
+
+.span {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 210px;
+    align-items: center;
+    font-weight: 900;
+}
+
+.myBlog .tarjeta span {
+    font-size: 10px;
+
+}
+
+.myBlog .tarjeta .red {
+    color: #FF014F;
+}
+
+.blog .container .myBlog .tarjeta h3 {
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+
+.blog .container .myBlog .tarjeta:hover {
+    h3 {
+        color: #FF014F
+    };
+
+    cursor: pointer;
+    box-shadow: 8px 8px 20px 0px #868686;
+
+}
+
+/* ---------------------Contact---------------------*/
+
+.contact {
+    display: flex;
+    justify-content: center;
+}
+
+
+.contactoPadre {
+
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 10px;
+}
+
+/* CONTACTO IZQUIERDA */
+
+/* Tarjeta */
+
+.contactoLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right, #E2E7ED, #FBFCFD);
+    box-shadow: 8px 8px 20px 0px #cecece;
+    border-radius: 10px;
+    padding: 30px;
+    gap: 15px;
+    width: 350px;
+
+}
+
+/* Div Imagen e imagen */
+
+.contactoImg {
+    width: fit-content;
+}
+
+.contactoLeft img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+/* Div texto y botones de SM */
+
+.textFindWithMe {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+/* Div texto */
+
+.contactoText {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.contactoText h3 {
+    font-size: 28px;
+}
+
+.contactoText span,
+.contactoText p,
+.findWithMeSM span {
+    font-size: 12px;
+}
+
+.emailPhone {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Div de botones de SM */
+
+.findWithMeSM {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.findWithMeSM span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #37383b;
+}
+
+.findWithMeSM ul {
+    display: flex;
+    list-style-type: none;
+    gap: 12px;
+    align-items: center;
+
+}
+
+.findWithMeSM ul a {
+    padding: 13px 15px;
+    background: linear-gradient(to right, #E2E7ED, #FBFCFD);
+    border-radius: 5px;
+    box-shadow: 8px 8px 20px 0px #cecece;
+    color: black;
+}
+
+.findWithMeSM ul a:hover {
+    background: linear-gradient(to right, #fb0019, #f28792);
+    color: white;
+    border-radius: 5px;
+}
+
+.findWithMeSM ul i {
+    font-size: 12px;
+}
+
+.findWithMeSM .instagram2 .fa-instagram {
+    font-size: 16px;
+}
+
+/* Contacto parte DERECHA */
+
+/* Tarjeta */
+
+.contactoRight {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 8px 8px 20px 0px;
+    background: linear-gradient(to right, #E2E7ED, #FBFCFD);
+    padding: 30px;
+    width: fit-content;
+    gap: 15px;
+}
+
+.contactoRight label {
+    font-size: 11px;
+    color: #A3A7AA;
+    font-weight: bold;
+}
+
+/* Div para el input name y phone number */
+
+.namePhonenumber {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.phone,
+.name {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+/* div inputs restantes para inputs y labels */
+
+.inputLabel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Input styling */
+
+.contactoRight input {
+    border: 2px solid #DDE0E1;
+    height: 35px;
+    width: 500px;
+    border-radius: 5px;
+}
+
+.phone input,
+.name input {
+    height: 35px;
+    width: 240px;
+    border-radius: 5px;
+    border: 2px solid #DDE0E1;
+}
+
+.contactoRight .message {
+    height: 170px;
+}
+
+.contactoRight button {
+    background-color: #FF014F;
+    color: white;
+    height: 35px;
+    border: none;
+    border-radius: 5px
+}
+
+.contactoRight button:hover {
+    cursor: pointer;
+    box-shadow: 8px 8px 20px 0px #868686;
+}
+
+/* ---------------footer----------------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+
+footer img {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #cecece;
+}
+
+footer .container h3 {
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+footer .container span {
+    font-size: 12px;
+    color: #555555;
+}
+
+.footerTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+}
+
+/* ----------------------------------MEDIA QUERIES -------------------------------------*/
+
+    /* ----------------------MEDIA QUERIE # 1---------------------- */
+
+@media screen and (max-width: 1100px) {
+
+
+    /* Header */
+
+    header {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 30px;
+        gap: 30%;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+
+    header nav,
+    nav ul,
+    nav ul li {
+        display: none;
+    }
+
+    header .spanPrincipal i {
+        display: block;
+    }
+
+
+
+    /* MAIN */
+
+    main {
+        padding-top: 30px;
+    }
+
+    .welcomePadre {
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .welcome {
+        width: fit-content;
+        padding-top: 30px;
+    }
+
+    .welcome .welcomeP{
+        width: 400px;
+        display: flex;
+        text-wrap: wrap;
+    }
+
+
+
+    .image {
+        width: fit-content;
+        margin: 0;
+
+    }
+
+    .image img {
+        width: 300px;
+    }
+
+    /* FEATURES */
+
+    .container {
+        width: max-content;
+    }
+
+
+    .features,
+    .features .container .featuresTitle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features .container .containerTarjetas {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+
+    }
+
+    .superior,
+    .inferiores {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /* PORTFOLIO */
+
+    .portfolio .container .tarjetasContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    /* resume */
+
+    .resumeBar ul {
+        width: max-content;
+    }
+
+
+    .resumeBar ul a {
+        padding: 25px 50px;
+        font-size: 15px;
+    }
+
+
+    .educationJobExp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+    /* blog */
+
+    .blog .container {
+        border: none;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .myBlog {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        width: max-content;
+    }
+
+    /* Contact */
+
+
+    .contact .container,
+    .contactoPadre {
+        width: max-content;
+    }
+    
+    .contact .container .contactoPadre .contactoLeft{
+        width: 350px;
+    }
+
+
+
+    .contactoPadre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    footer .container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+}
+
+    /* ----------------------MEDIA QUERIE # 2---------------------- */
+
+
+@media screen and (max-width: 1000px) {
+
+
+
+
+    /* FEATURES */
+
+
+    .features .container .containerTarjetas {
+        gap: 20px;
+    }
+
+    .superior,
+    .inferiores {
+        gap: 20px;
+        margin: 0;
+    }
+
+    .features .tarjeta {
+        height: 196px;
+        width: 196px;
+
+    }
+
+    .tarjetaContenido {
+        gap: 10px;
+    }
+
+    .containerTarjetas .tarjeta h3 {
+        font-size: 18px;
+    }
+
+    .containerTarjetas .tarjeta i {
+        margin-left: 5px;
+        font-size: 15px;
+    }
+
+    .containerTarjetas .tarjeta .wifi i {
+        font-size: 16px;
+    }
+
+    .containerTarjetas .tarjeta p {
+        font-size: 10px;
+    }
+
+
+    /* PORTFOLIO */
+
+    .portfolio .container .tarjeta {
+        gap: 10px;
+        height: 196px;
+        width: 171px;
+    }
+
+    .portfolio .container .tarjeta img {
+        width: 171px;
+    }
+
+    .portfolio .container .tarjeta span {
+        font-size: 8px;
+    }
+
+
+    .portfolio .container .tarjeta .spanScore .scorePortfolio {
+        font-size: 8px;
+    }
+
+    .portfolio .container .tarjeta h3 {
+        font-size: 15px;
+    }
+
+
+    /* resume */
+
+    .resume .container {
+        padding-bottom: 30px;
+    }
+
+
+    .resumeBar ul {
+        height: fit-content;
+        width: max-content;
+        padding: 20px 0px;
+
+    }
+
+
+    .resumeBar ul a {
+        padding: 20px 40px;
+        font-size: 12px;
+    }
+
+    /* blog */
+
+    .blog .container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .myBlog {
+        gap: 40px;
+        width: max-content;
+    }
+
+    /* Contact */
+
+    .contact .container,
+    .contactoPadre {
+        width: max-content;
+    }
+
+    .contactoPadre {
+        height: 100%;
+    }
+    
+    .contact .container .contactoPadre .contactoLeft{
+        width: 350px;
+    }
+
+
+
+}
+
+
+/* ----------------------MEDIA QUERIE # 3---------------------- */
+
+
+@media screen and (max-width: 797px) {
+
+
+
+    .resume .container {
+        display: flex;
+        justify-content: center;
+        border-bottom: 2px solid #E5E9EC;
+        padding-bottom: 30px;
+    }
+
+    .container .containerTitle,
+    .featuresTitle {
+        margin-bottom: 0px
+    }
+
+    .container .containerTitle span,
+    .featuresTitle span,
+    .containerTitle span {
+        font-size: 8px;
+    }
+
+    .container .containerTitle h2,
+    .featuresTitle h2,
+    .containerTitle h2 {
+        font-size: 30px;
+    }
+
+
+    .resumeBar ul {
+        display: flex;
+        height: fit-content;
+        width: max-content;
+        padding: 10px 0px;
+
+    }
+
+
+    .resumeBar ul a {
+
+        padding: 15px 30px;
+        font-size: 11px;
+    }
+
+
+    .educationJobExp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .year {
+        font-size: 10px;
+    }
+
+    .educationJobExp .educationLeft .EdQualityH3Span h3,
+    .jobExperienceH3Span h3 {
+        font-size: 20px;
+    }
+
+    .circleAndLine {
+        display: none;
+    }
+
+    .educationJobExp .card {
+        margin-bottom: 10px;
+        padding: 15px;
+        width: 300px;
+        height: 125px;
+    }
+
+    .h3Span {
+        margin-bottom: 10px;
+    }
+
+    .educationJobExp .card h3 {
+        font-size: 15px;
+    }
+
+    .educationJobExp .card .subtitle,
+    .educationJobExp .card .score {
+        font-size: 8px;
+    }
+
+    .score {
+        padding: 4px;
+    }
+
+    .educationJobExp .card p {
+        font-size: 8px;
+        padding-top: 10px;
+    }
+
+    /* blog */
+    .myBlog .tarjeta {
+        gap: 10px;
+        height: 196px;
+        width: 171px;
+    }
+
+    .myBlog .tarjeta img {
+
+        width: 171px;
+        height: 128px;
+        bottom: 120px;
+
+    }
+
+    .blog .container .myBlog .tarjeta h3 {
+        font-size: 15px;
+    }
+
+    .span {
+        margin-top: 130px;
+        align-items: center;
+        font-weight: 900;
+    }
+
+    .myBlog .tarjeta span {
+        font-size: 8px;
+    }
+
+    /* contacto */
+
+
+    .contact .container .contactoPadre {
+        gap: 20px;
+        width: max-content;
+    }
+    
+    .contact .container .contactoPadre .contactoLeft{
+        width: 350px;
+    }
+
+
+    .contactoRight {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contactoRight label {
+        font-size: 10px;
+    }
+
+    .namePhonenumber {
+        width: 100%;
+        gap: 0;
+    }
+
+
+    .phone,
+    .name {
+        gap: 12px;
+    }
+
+    .inputLabel {
+        gap: 12px;
+    }
+
+    .contactoRight input {
+
+        height: 35px;
+        width: 350px;
+    }
+
+    .phone input,
+    .name input {
+
+        width: 160px;
+
+    }
+
+    .contactoRight .message {
+        height: 120px;
+    }
+
+    .contactoRight button {
+
+        width: 350px;
+    }
+
+    /* ----------------------MEDIA QUERIE # 4---------------------- */
+
+}
+
+@media screen and (max-width: 450px) {
+    header {
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    /* main */
+    main,
+    section {
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    .container {
+        padding: 0;
+    }
+    
+    main{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .welcomePadre {
+        align-items: center;
+        width: max-content;
+        padding: 20px;
+    }
+
+    .welcome .welcomeP{
+        width: 300px;
+
+    }
+
+    .welcome{
+        padding-top: 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+    }
+
+
+
+    
+    .welcome,
+    .welcomeContainer, 
+    .image, .image img {
+        width: 100%;
+        height: max-content;
+    }
+
+    .welcomeContainer {
+        margin-bottom: 10px
+    }
+
+    .welcomeContainer,
+    .welcome .welcomeContainer .titleH1 {
+        gap: 10px;
+        width: max-content;
+    }
+
+    .welcome .welcomeContainer .titleH1 h1 {
+        font-size: 35px;
+    }
+
+    .welcome .welcomeContainer .titleH1 h2 {
+        font-size: 30px;
+    }
+
+    .welcome .welcomeContainer .welcomeSpan {
+        font-size: 8px;
+    }
+
+    .welcomePadre .welcome .welcomeContainer p {
+        font-size: 12px;
+    }
+
+    .social-media {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+
+    }
+
+    .social-media .sm-left i,
+    .social-media .sm-right i {
+        font-size: 12px;
+    }
+
+    /* FEAUTURES */
+
+    .container {
+        width: max-content;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .featuresTitle{
+        padding: 0;
+    }
+
+    .features .container .containerTarjetas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Portfolio */
+    .portfolio .container .tarjetasContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Resume */
+
+    .resumeBar ul {
+        height: fit-content;
+        width: max-content;
+        padding: 10px 0px;
+    }
+
+    .resumeBar {
+        width: max-content;
+    }
+
+    .resumeBar ul a {
+        padding: 15px 10px;
+        font-size: 10px;
+    }
+
+    .educationJobExp .card {
+        margin-bottom: 10px;
+        padding: 15px;
+        width: 250px;
+        height: 125px;
+    }
+
+    /* contact */
+
+    /* tarjeta 1 */
+
+    .contactoPadre {
+        width: max-content;
+    }
+
+    .contact .container .contactoPadre .contactoLeft {
+
+        
+        padding: 30px;
+        gap: 15px;
+        align-items: center;
+        width: max-content;
+       
+
+    }
+
+    .contactoImg{
+        width: fit-content;
+        
+        
+    }
+
+
+    .contactoLeft img {
+        width: 250px;
+    }
+
+    .textFindWithMe {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contactoText{
+        width: 250px;
+    }
+
+
+    .contactoText h3 {
+        font-size: 20px;
+    }
+
+    .contactoText span,
+    .contactoText p,
+    .findWithMeSM span {
+        font-size: 10px;
+    }
+
+    /* tarjeta 2 */
+
+
+    .contactoRight {
+        gap: 10px;
+    }
+
+    .contactoRight label {
+        font-size: 8px;
+    }
+
+    .namePhonenumber {
+        width: 100%;
+        gap: 0;
+    }
+
+
+    .phone,
+    .name {
+        gap: 0;
+    }
+
+    .inputLabel {
+        gap: 12px;
+    }
+
+    .contactoRight input {
+
+        width: 250px;
+    }
+
+    .phone input,
+    .name input {
+
+        width: 120px;
+
+    }
+
+
+    .contactoRight button {
+
+        width: 250px;
+    }
+
+}
