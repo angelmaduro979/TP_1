@@ -19,6 +19,8 @@
 
 <body>
     <header>
+        <div id="overlay"></div>
+
         <div class="logo">
             <h2>LOGO</h2>
         </div>
@@ -48,6 +50,20 @@
     <main>
 
         <!--Contenido IZQUIERDO-->
+
+        <div class="popup" id="popupContenedor">
+            <span class="close1">
+                <i class="fa-solid fa-x closeIcono1" id="popupCerrar"></i>
+            </span>
+            <h1>PSST, HEY, YOU <br>(YEAH, YOU)</h1>
+            <span>GET A 20% DISCOUNT ON YOUR FIRST WORK WITH ME WITH THE CODE <br>
+            #CODING</span>
+            <form  class="popupFormClass"  id="popupForm">
+                <input type="email" placeholder="ENTER YOUR EMAIL FOR MORE INFO" id="inputPopup">
+                <a href="#" id="submitPopup">SUBMIT</a>
+            </form>
+
+        </div>
 
         <div class="welcomePadre">
             <div class="welcome" id="HOME">
@@ -98,14 +114,14 @@
                 <!--Contenido DERECHO-->
             </div>
             <div class="image">
-                <img src="images/Sheroz Mir_pic.png" alt="Angel Maduro">
+                <img src="images/Sheroz Mir_pic.png" alt="Angel Maduro" id="imagenBienvenida">
             </div>
         </div>
     </main>
 
     <!--FEATURES-->
 
-    <sectionn class="features" id="features">
+    <section class="features" id="features">
         <div class="container">
 
             <div class="featuresTitle">
@@ -145,11 +161,6 @@
                             </p>
                         </div>
                     </div>
-                </div>
-
-                <!--Tarjetas inferiores-->
-
-                <div class="inferiores">
                     <div class="tarjeta">
                         <div class="tarjetaContenido">
                             <span><i class="fa-brands fa-twitch"></i></i></span>
@@ -170,8 +181,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="tarjeta tarjeta3inferior">
-                        <div class="tarjetaContenido tarjetaContenido3">
+                    <div class="tarjeta">
+                        <div class="tarjetaContenido">
                             <span> <i class="fa-brands fa-slack"></i></span>
 
                             <h3>Personal Portfolio April</h3>
@@ -182,9 +193,16 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="botonesSlider">
+                    <i class="fa-solid fa-chevron-left botonLeft"></i>
+                    <i class="fa-solid fa-chevron-right botonRight"></i>
+                </div>
+
+
             </div>
         </div>
-    </sectionn>
+    </section>
 
 
 
@@ -206,7 +224,30 @@
                             <span class="scorePortfolio">600</span>
                         </div>
                         <h3>The services provide for <br>design</h3>
+                        <span class="saberMas">Saber Mas</span>
+                        <div class="saberMasCajaDesplegablePadre">
+                            <div class="saberMasCajaDesplegable">
+                                <span class="close">
+                                    <i class="fa-solid fa-x closeIcono"></i>
+                                </span>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, amet, magnam
+                                    facere
+                                    autem
+                                    id ea eligendi nulla, quasi laudantium molestias vel exercitationem. Incidunt animi
+                                    obcaecati eligendi sint numquam quidem eius!
+                                </p>
+                                <div class="repo">
+                                    <span> Visita mi repositorio</span>
+                                    <a href="https://github.com/angelmaduro979/TP_1" target="_blank"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+
+
+
                     <div class="tarjeta">
                         <img src="images/my_portfolio_imgs/my-portfolio-2.png" alt="img2">
                         <div class="spanScore">
@@ -214,6 +255,26 @@
                             <span class="scorePortfolio">750</span>
                         </div>
                         <h3>Mobile app landing design & <br>app maintain</h3>
+                        <span class="saberMas">Saber Mas</span>
+                        <div class="saberMasCajaDesplegablePadre">
+                            <div class="saberMasCajaDesplegable">
+                                <span class="close">
+                                    <i class="fa-solid fa-x closeIcono"></i>
+                                </span>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, amet, magnam
+                                    facere
+                                    autem
+                                    id ea eligendi nulla, quasi laudantium molestias vel exercitationem. Incidunt animi
+                                    obcaecati eligendi sint numquam quidem eius!
+                                </p>
+                                <div class="repo">
+                                    <span> Visita mi repositorio</span>
+                                    <a href="https://github.com/angelmaduro979/TP_1" target="_blank"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                     <div class="tarjeta">
                         <img src="images/my_portfolio_imgs/my-portfolio-3.png" alt="img3">
@@ -222,6 +283,26 @@
                             <span class="scorePortfolio">630</span>
                         </div>
                         <h3>Logo design creativity & Application</h3>
+                        <span class="saberMas">Saber Mas</span>
+                        <div class="saberMasCajaDesplegablePadre">
+                            <div class="saberMasCajaDesplegable">
+                                <span class="close">
+                                    <i class="fa-solid fa-x closeIcono"></i>
+                                </span>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, amet, magnam
+                                    facere
+                                    autem
+                                    id ea eligendi nulla, quasi laudantium molestias vel exercitationem. Incidunt animi
+                                    obcaecati eligendi sint numquam quidem eius!
+                                </p>
+                                <div class="repo">
+                                    <span> Visita mi repositorio</span>
+                                    <a href="https://github.com/angelmaduro979/TP_1" target="_blank"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -233,6 +314,26 @@
                             <span class="scorePortfolio">360</span>
                         </div>
                         <h3>Mobile app landing design & Services</h3>
+                        <span class="saberMas">Saber Mas</span>
+                        <div class="saberMasCajaDesplegablePadre">
+                            <div class="saberMasCajaDesplegable">
+                                <span class="close">
+                                    <i class="fa-solid fa-x closeIcono"></i>
+                                </span>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, amet, magnam
+                                    facere
+                                    autem
+                                    id ea eligendi nulla, quasi laudantium molestias vel exercitationem. Incidunt animi
+                                    obcaecati eligendi sint numquam quidem eius!
+                                </p>
+                                <div class="repo">
+                                    <span> Visita mi repositorio</span>
+                                    <a href="https://github.com/angelmaduro979/TP_1" target="_blank"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                     <div class="tarjeta">
                         <img src="images/my_portfolio_imgs/my-portfolio-5.png" alt="img5">
@@ -241,15 +342,57 @@
                             <span class="scorePortfolio">280</span>
                         </div>
                         <h3>Design for tecnology & <br>services</h3>
+                        <span class="saberMas">Saber Mas</span>
+                        <div class="saberMasCajaDesplegablePadre">
+                            <div class="saberMasCajaDesplegable">
+                                <span class="close">
+                                    <i class="fa-solid fa-x closeIcono"></i>
+                                </span>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, amet, magnam
+                                    facere
+                                    autem
+                                    id ea eligendi nulla, quasi laudantium molestias vel exercitationem. Incidunt animi
+                                    obcaecati eligendi sint numquam quidem eius!
+                                </p>
+                                <div class="repo">
+                                    <span> Visita mi repositorio</span>
+                                    <a href="https://github.com/angelmaduro979/TP_1" target="_blank"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+
                     <div class="tarjeta">
                         <img src="images/my_portfolio_imgs/my-portfolio-6.png" alt="img6">
                         <div class="spanScore">
                             <span>WEB DESIGN</span>
                             <span class="scorePortfolio">690</span>
                         </div>
-                        <h3>App for tecnology & services</h3>
+                        <h3>App for tecnology & services services</h3>
+                        <span class="saberMas">Saber Mas</span>
+                        <div class="saberMasCajaDesplegablePadre">
+                            <div class="saberMasCajaDesplegable">
+                                <span class="close">
+                                    <i class="fa-solid fa-x closeIcono"></i>
+                                </span>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, amet, magnam
+                                    facere
+                                    autem
+                                    id ea eligendi nulla, quasi laudantium molestias vel exercitationem. Incidunt animi
+                                    obcaecati eligendi sint numquam quidem eius!
+                                </p>
+                                <div class="repo">
+                                    <span> Visita mi repositorio</span>
+                                    <a href="https://github.com/angelmaduro979/TP_1" target="_blank"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -367,9 +510,6 @@
 
                     </div>
                 </div>
-
-
-
 
 
 
@@ -548,32 +688,35 @@
                     </div>
                 </div>
 
-                <div class="contactoRight">
+                <form class="contactoRight" id="formCustomer">
+
                     <div class="namePhonenumber">
-                        <div class="name">
+                        <div class="name" aria-required="true">
                             <label for="">YOUR NAME</label>
-                            <input type="text">
+                            <input type="text" id="nameInput">
                         </div>
                         <div class="phone">
                             <label for="">PHONE NUMBER</label>
-                            <input type="tel">
+                            <input type="tel" id="phoneInput">
                         </div>
                     </div>
                     <div class="inputLabel">
                         <label for="">EMAIL</label>
-                        <input type="email">
+                        <input type="email" id="emailInput">
                     </div>
 
                     <div class="inputLabel">
                         <label for="">SUBJECT</label>
-                        <input type="text">
+                        <input type="text" id="subjectInput">
                     </div>
                     <div class="inputLabel">
                         <label for="">YOUR MESSAGE</label>
-                        <input type="text" class="message">
+                        <textarea class="message" id="messageInput"></textarea>
+
                     </div>
-                    <button>SEND MESSAGE</button>
-                </div>
+                    <button id="buttonForm">SEND MESSAGE</button>
+
+                </form>
             </div>
         </div>
     </section>
@@ -587,6 +730,7 @@
             </div>
         </div>
     </footer>
+    <script src="app.js"></script>
 </body>
 
 </html>

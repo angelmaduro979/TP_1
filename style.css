@@ -28,6 +28,17 @@ span {
     font-family: 'poppins';
 }
 
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semitransparente */
+    z-index: 10; /* Colocar el overlay encima de todo */
+    display: none;
+} 
+
 /* barra de navegacion */
 
 header {
@@ -35,7 +46,7 @@ header {
     justify-content: space-between;
     padding: 30px 0px;
     align-items: center;
-    background-color: #ECF0F3; 
+    background-color: #ECF0F3;
 }
 
 /* logo y div */
@@ -97,6 +108,92 @@ main {
     display: flex;
     justify-content: center;
     padding-bottom: 70px;
+    position: relative;
+
+}
+
+/* POPUP */
+
+.popup{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(to right, #E2E7ED, #FBFCFD);
+    border-radius: 5px;
+    box-shadow: 8px 8px 20px 0px #cecece;
+    padding: 10px 30px 50px 30px;
+    position: fixed;
+    z-index: 11;
+}
+
+.popup .close1 {
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+    width: 100%;
+}
+
+.popup .close1 i {
+    font-size: 20px;
+    color: #3C3E41;
+}
+
+.popup .close1 i:hover {
+    cursor: pointer;
+    color: #fb0019;
+    transform: scale(1.1);
+}
+
+.popup .popupFormClass{
+    display: flex;
+    gap: 0;
+    border: none;
+    align-items: center;
+    
+}
+
+.popup .popupFormClass input{
+    width: 250px;
+    padding: 10px;
+    border: 2px solid #cecece;
+    border-right: none;
+    
+}
+
+.popup .popupFormClass input::placeholder{
+    font-size: 12px;   
+    text-align: center;
+}
+.popup .popupFormClass a{
+    text-decoration: none;
+    font-size: 12px;
+    padding: 11px;
+    border: 2px solid black;
+    background-color: black;
+    box-shadow: 8px 8px 20px 0px #cecece;
+    color: white;
+    font-weight: bold;
+}
+
+.popup .popupFormClass a:hover{
+    background: linear-gradient(to right, #fb0019, #f28792);
+    color: white;
+    border: 2px solid #fb0019;
+}
+
+
+
+
+.popup h1{
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.popup span{
+    font-size: 10px;
+    text-align: center;
 
 }
 
@@ -187,6 +284,13 @@ main img {
     height: 100%;
     border-radius: 10px;
     box-shadow: 8px 8px 20px 0px #b6b6b6;
+    transition: 0.2s ease-in-out;
+    /*Lo usamos para que el hover de abajo no sea tan Brusco*/
+}
+
+main img:hover {
+    transform: scale(1.1);
+    /*para que cambie de tamaño cuando pase el mouse*/
 }
 
 /* Redes sociales div y botones */
@@ -273,13 +377,14 @@ main img {
 
 }
 
+
 /* titulo seccion */
 
 .featuresTitle {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-left: 40px;
+    align-items: center;
 }
 
 .featuresSpan {
@@ -300,25 +405,55 @@ main img {
 .containerTarjetas {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    width: 100%;
-    padding-bottom: 80px;
-    width: 100%;
+    width: 400px;
     align-items: center;
     justify-content: center;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
+
+.containerTarjetas .botonesSlider {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 180px;
+    width: 100%;
+    bottom: 0px;
+    background-color: #2b2d2f;
+    padding: 10px;
+    position: absolute;
+
+
+}
+
+.containerTarjetas .botonesSlider i {
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    background: linear-gradient(to right, #4c4e5090, #8c8c8d6d);
+    padding: 15px;
+}
+
+.containerTarjetas .botonesSlider i:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    background: linear-gradient(to right, #9ba0a590, #f7f7f76d);
+    color: black
+}
+
+
 
 /* Div para hileras de tarjetas */
 
 .superior {
     display: flex;
-    gap: 40px;
+    width: 100% ;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.inferiores {
-    display: flex;
-    gap: 40px;
-}
 
 /* tarjetas */
 
@@ -327,11 +462,13 @@ main img {
     padding: 25px;
     display: flex;
     justify-content: center;
-    height: 300px;
-    width: 300px;
     border-radius: 10px;
     background: linear-gradient(to right, #E2E7ED, #FBFCFD);
     box-shadow: 8px 8px 20px 0px #cecece;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    width: 400px;
+    margin: 0;
 }
 
 /* Tarjetas contenido */
@@ -344,10 +481,6 @@ main img {
     justify-content: center;
     padding: 0;
 
-}
-
-.tarjetaContenido3 {
-    padding-bottom: 30px;
 }
 
 .containerTarjetas .tarjeta h3 {
@@ -413,8 +546,14 @@ main img {
 .tarjetasContainer {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 40px;
 
+}
+
+.tarjetasContainer .inferiores, .tarjetasContainer .superior{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
 }
 
 .portfolio .container .tarjeta {
@@ -429,6 +568,8 @@ main img {
     border-radius: 20px;
     background: linear-gradient(to right, #E2E7ED, #FBFCFD);
     box-shadow: 8px 8px 20px 0px #cecece;
+    z-index: 0;
+    position: relative;
 }
 
 /* Tarjetas contenido */
@@ -463,6 +604,77 @@ main img {
     font-size: 20px;
 }
 
+.portfolio .container .tarjeta .saberMas {
+    color: #5c5e63;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+.portfolio .container .tarjeta .saberMas:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: #FF014F;
+}
+
+.tarjetasContainer .tarjeta .saberMasCajaDesplegablePadre {
+    position: absolute;
+    width: fit-content;
+    right: 10px;
+    top: 70px;
+    z-index: 1;
+    display: none;
+    box-shadow: 8px 8px 20px 0px #cecece
+}
+
+.tarjetasContainer .tarjeta .saberMasCajaDesplegable {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(to right, #E2E7ED, #FBFCFD);
+    width: 280px;
+    padding: 10px 20px;
+}
+
+.tarjetasContainer .tarjeta .saberMasCajaDesplegable p {
+    font-size: 15px;
+}
+
+.tarjetasContainer .tarjeta .saberMasCajaDesplegable .close {
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+
+.tarjetasContainer .tarjeta .saberMasCajaDesplegable .close i {
+    font-size: 15px;
+    color: #3C3E41;
+}
+
+.tarjetasContainer .tarjeta .saberMasCajaDesplegable .close i:hover {
+    cursor: pointer;
+    color: #fb0019;
+    transform: scale(1.1);
+}
+
+.tarjetasContainer .tarjeta .saberMasCajaDesplegable .repo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarjetasContainer .tarjeta .saberMasCajaDesplegable .repo span {
+    font-size: 15px;
+}
+
+.tarjetasContainer .tarjeta .saberMasCajaDesplegable .repo i {
+    font-size: 25px;
+    color: #2b2d2f;
+}
+
+.tarjetasContainer .tarjeta .saberMasCajaDesplegable .repo i:hover {
+    cursor: pointer;
+    color: #fb0019;
+    transform: scale(1.2);
+}
 
 /* --------------------Resume ----------------------*/
 
@@ -746,7 +958,9 @@ main img {
 .blog .container .myBlog .tarjeta:hover {
     h3 {
         color: #FF014F
-    };
+    }
+
+    ;
 
     cursor: pointer;
     box-shadow: 8px 8px 20px 0px #868686;
@@ -892,6 +1106,8 @@ main img {
     gap: 15px;
 }
 
+
+
 .contactoRight label {
     font-size: 11px;
     color: #A3A7AA;
@@ -941,6 +1157,9 @@ main img {
 
 .contactoRight .message {
     height: 170px;
+    resize: none;
+    border-radius: 5px;
+    border: 2px solid #DDE0E1;
 }
 
 .contactoRight button {
@@ -948,7 +1167,8 @@ main img {
     color: white;
     height: 35px;
     border: none;
-    border-radius: 5px
+    border-radius: 5px;
+
 }
 
 .contactoRight button:hover {
@@ -993,7 +1213,7 @@ footer .container span {
 
 /* ----------------------------------MEDIA QUERIES -------------------------------------*/
 
-    /* ----------------------MEDIA QUERIE # 1---------------------- */
+/* ----------------------MEDIA QUERIE # 1---------------------- */
 
 @media screen and (max-width: 1100px) {
 
@@ -1043,7 +1263,7 @@ footer .container span {
         padding-top: 30px;
     }
 
-    .welcome .welcomeP{
+    .welcome .welcomeP {
         width: 400px;
         display: flex;
         text-wrap: wrap;
@@ -1075,19 +1295,11 @@ footer .container span {
         align-items: center;
     }
 
-    .features .container .containerTarjetas {
-        display: flex;
-        flex-direction: row;
-        gap: 40px;
-
+    .containerTarjetas {
+        height: 300px
     }
 
-    .superior,
-    .inferiores {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
+
 
     /* PORTFOLIO */
 
@@ -1096,6 +1308,14 @@ footer .container span {
         flex-direction: row;
         gap: 40px;
     }
+
+    .superior,
+    .inferiores {
+        display: flex;
+        flex-direction: column;
+    }
+
+
 
     /* resume */
 
@@ -1115,7 +1335,6 @@ footer .container span {
         flex-direction: column;
         align-items: center;
     }
-
 
 
     /* blog */
@@ -1141,8 +1360,8 @@ footer .container span {
     .contactoPadre {
         width: max-content;
     }
-    
-    .contact .container .contactoPadre .contactoLeft{
+
+    .contact .container .contactoPadre .contactoLeft {
         width: 350px;
     }
 
@@ -1163,7 +1382,7 @@ footer .container span {
 
 }
 
-    /* ----------------------MEDIA QUERIE # 2---------------------- */
+/* ----------------------MEDIA QUERIE # 2---------------------- */
 
 
 @media screen and (max-width: 1000px) {
@@ -1174,10 +1393,6 @@ footer .container span {
     /* FEATURES */
 
 
-    .features .container .containerTarjetas {
-        gap: 20px;
-    }
-
     .superior,
     .inferiores {
         gap: 20px;
@@ -1185,8 +1400,8 @@ footer .container span {
     }
 
     .features .tarjeta {
-        height: 196px;
-        width: 196px;
+        height: 300px;
+        width: 300px;
 
     }
 
@@ -1212,6 +1427,7 @@ footer .container span {
     }
 
 
+
     /* PORTFOLIO */
 
     .portfolio .container .tarjeta {
@@ -1234,9 +1450,39 @@ footer .container span {
     }
 
     .portfolio .container .tarjeta h3 {
+        font-size: 12px;
+    }
+
+    .tarjetasContainer .tarjeta .saberMasCajaDesplegablePadre {
+        right: 10px;
+        top: 20px;
+    }
+
+    .tarjetasContainer .tarjeta .saberMasCajaDesplegable {
+        gap: 10px;
+        width: 196px;
+        padding: 5px 10px;
+    }
+
+
+    .tarjetasContainer .tarjeta .saberMasCajaDesplegable p {
+        font-size: 10px;
+    }
+
+
+    .tarjetasContainer .tarjeta .saberMasCajaDesplegable .close i {
         font-size: 15px;
     }
 
+
+    .tarjetasContainer .tarjeta .saberMasCajaDesplegable .repo span {
+        font-size: 12px;
+    }
+
+    .tarjetasContainer .tarjeta .saberMasCajaDesplegable .repo i {
+        font-size: 25px;
+        color: #2b2d2f;
+    }
 
     /* resume */
 
@@ -1280,8 +1526,8 @@ footer .container span {
     .contactoPadre {
         height: 100%;
     }
-    
-    .contact .container .contactoPadre .contactoLeft{
+
+    .contact .container .contactoPadre .contactoLeft {
         width: 350px;
     }
 
@@ -1423,8 +1669,8 @@ footer .container span {
         gap: 20px;
         width: max-content;
     }
-    
-    .contact .container .contactoPadre .contactoLeft{
+
+    .contact .container .contactoPadre .contactoLeft {
         width: 350px;
     }
 
@@ -1469,6 +1715,7 @@ footer .container span {
 
     .contactoRight .message {
         height: 120px;
+        width: 350px
     }
 
     .contactoRight button {
@@ -1498,8 +1745,8 @@ footer .container span {
     .container {
         padding: 0;
     }
-    
-    main{
+
+    main {
         padding-top: 20px;
         padding-bottom: 20px;
     }
@@ -1510,25 +1757,26 @@ footer .container span {
         padding: 20px;
     }
 
-    .welcome .welcomeP{
+    .welcome .welcomeP {
         width: 300px;
 
     }
 
-    .welcome{
+    .welcome {
         padding-top: 0;
         align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center ;
+        align-items: center;
     }
 
 
 
-    
+
     .welcome,
-    .welcomeContainer, 
-    .image, .image img {
+    .welcomeContainer,
+    .image,
+    .image img {
         width: 100%;
         height: max-content;
     }
@@ -1580,13 +1828,18 @@ footer .container span {
         padding-bottom: 20px;
     }
 
-    .featuresTitle{
+    .featuresTitle {
         padding: 0;
     }
 
     .features .container .containerTarjetas {
-        flex-direction: column;
-        align-items: center;
+        width: 300px;
+        height: 300px;
+    }
+
+    .containerTarjetas .tarjeta {
+        width: 300px;
+        height: 300px
     }
 
     /* Portfolio */
@@ -1629,19 +1882,19 @@ footer .container span {
 
     .contact .container .contactoPadre .contactoLeft {
 
-        
+
         padding: 30px;
         gap: 15px;
         align-items: center;
         width: max-content;
-       
+
 
     }
 
-    .contactoImg{
+    .contactoImg {
         width: fit-content;
-        
-        
+
+
     }
 
 
@@ -1655,7 +1908,7 @@ footer .container span {
         gap: 10px;
     }
 
-    .contactoText{
+    .contactoText {
         width: 250px;
     }
 
@@ -1675,6 +1928,7 @@ footer .container span {
 
     .contactoRight {
         gap: 10px;
+        width: max-content;
     }
 
     .contactoRight label {
@@ -1697,7 +1951,6 @@ footer .container span {
     }
 
     .contactoRight input {
-
         width: 250px;
     }
 
@@ -1706,6 +1959,10 @@ footer .container span {
 
         width: 120px;
 
+    }
+
+    .contactoRight .message {
+        width: 250px;
     }
 
 
